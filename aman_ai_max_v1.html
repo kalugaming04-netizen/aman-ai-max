@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#080d1b">
+<title>AMAN AI MAX</title>
+<style>
+:root{color-scheme:dark;--bg:#080d1b;--panel:#121b30;--line:#263654;--cyan:#55d8ff;--violet:#9274ff;--muted:#a9b6cc}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% -10%,#24376a 0,#080d1b 48%);font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#f7f9ff;min-height:100vh}
+main{max-width:560px;margin:auto;padding:18px 16px 34px}.top{display:flex;align-items:center;justify-content:space-between;padding:8px 2px 22px}.brand{display:flex;gap:11px;align-items:center}.logo{width:46px;height:46px;border-radius:15px;background:linear-gradient(135deg,#47d9ff,#7658ff);display:grid;place-items:center;font-weight:900;color:#081021;font-size:19px;box-shadow:0 0 25px #4c9cff55}.sub{color:var(--muted);font-size:12px}.pill{border:1px solid #315075;border-radius:99px;padding:7px 11px;color:#8ee8ff;font-size:11px}
+h1{font-size:28px;margin:8px 0 4px;letter-spacing:.2px}.intro{color:var(--muted);font-size:14px;margin:0 0 18px}
+.card{background:linear-gradient(160deg,#17233b,#10182a);border:1px solid var(--line);border-radius:22px;padding:17px;margin:13px 0;box-shadow:0 12px 35px #0003}
+.center{text-align:center}.orb{width:142px;height:142px;border-radius:50%;margin:12px auto 16px;background:radial-gradient(circle at 35% 30%,#a8f4ff,#448bff 34%,#5d45d4 66%,#172348 72%);box-shadow:0 0 28px #56baff66, inset 0 0 22px #fff7;display:grid;place-items:center;font-size:42px;border:1px solid #9eeaff88}
+.status{font-size:13px;color:#9eeaff;margin:5px}.hint{font-size:12px;color:var(--muted);line-height:1.5}
+button{border:0;border-radius:14px;padding:13px 15px;font-weight:750;font-size:14px;cursor:pointer;color:#08111f;background:linear-gradient(100deg,#5ee5ff,#9a86ff);width:100%;margin-top:9px}
+button.secondary{background:#202e49;color:#e9f3ff;border:1px solid #344969}button:active{transform:scale(.99)}
+textarea,input{width:100%;background:#0b1324;color:#fff;border:1px solid #344969;border-radius:13px;padding:13px;font:inherit;outline:none}textarea{min-height:76px;resize:vertical}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:9px}.feature{display:flex;gap:12px;align-items:center;padding:11px 0;border-bottom:1px solid #263654}.feature:last-child{border:0}.ico{width:38px;height:38px;border-radius:12px;background:#24375a;display:grid;place-items:center;font-size:19px}.feature b{font-size:14px}.feature small{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+#reply{white-space:pre-wrap;line-height:1.5;font-size:14px;color:#e8f3ff;min-height:22px}.foot{text-align:center;color:#7f8da7;font-size:11px;margin:18px 5px}
+</style>
+</head>
+<body>
+<main>
+ <div class="top"><div class="brand"><div class="logo">A</div><div><b>AMAN AI MAX</b><div class="sub">आपका हिंदी स्मार्ट असिस्टेंट</div></div></div><div class="pill">BETA • V1</div></div>
+ <h1>नमस्ते, Aman! 👋</h1><p class="intro">बोलिए या लिखिए — मैं आपकी मदद के लिए तैयार हूँ।</p>
+ <section class="card center">
+  <div class="orb">✦</div><div class="status" id="status">तैयार हूँ</div>
+  <div class="hint">माइक दबाकर बोलें। पहली बार ब्राउज़र माइक्रोफोन अनुमति माँग सकता है।</div>
+  <button id="mic">🎙️ बोलकर बताइए</button>
+  <button class="secondary" id="speak">🔊 जवाब दोबारा सुनें</button>
+ </section>
+ <section class="card">
+  <b>मुझसे कुछ पूछिए</b>
+  <textarea id="prompt" placeholder="जैसे: आज का काम याद दिलाओ, Google खोलो, WhatsApp खोलो..."></textarea>
+  <button id="send">भेजें ➜</button>
+  <div style="height:12px"></div><div id="reply" aria-live="polite">आपका जवाब यहाँ दिखाई देगा।</div>
+ </section>
+ <section class="card">
+  <b>क्विक कमांड</b>
+  <div class="row">
+   <button class="secondary" data-cmd="WhatsApp खोलो">💬 WhatsApp</button>
+   <button class="secondary" data-cmd="Google खोलो">🌐 Google</button>
+   <button class="secondary" data-cmd="YouTube खोलो">▶️ YouTube</button>
+   <button class="secondary" data-cmd="समय बताओ">🕒 समय</button>
+  </div>
+ </section>
+ <section class="card">
+  <b>आने वाले फीचर</b>
+  <div class="feature"><div class="ico">🧠</div><div><b>AI Brain</b><small>AI API जोड़ने के बाद वास्तविक AI जवाब</small></div></div>
+  <div class="feature"><div class="ico">📲</div><div><b>Android Controls</b><small>ऐप खोलना और सिस्टम कंट्रोल — APK में अनुमति के साथ</small></div></div>
+  <div class="feature"><div class="ico">💬</div><div><b>WhatsApp Automation</b><small>सुरक्षित तरीके से मैसेज तैयार करना; भेजने से पहले आपकी पुष्टि</small></div></div>
+  <div class="feature"><div class="ico">👁️</div><div><b>Screen Vision</b><small>अगले चरण में स्क्रीन पढ़ने की सुविधा</small></div></div>
+ </section>
+ <p class="foot">AMAN AI MAX V1 • यह पहला वेब प्रोटोटाइप है। यह अभी पूर्ण Android सिस्टम कंट्रोल या बैकग्राउंड AI नहीं है।</p>
+</main>
+<script>
+const $=s=>document.querySelector(s);let lastReply='';
+function say(t){lastReply=t;if('speechSynthesis'in window){speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(t);u.lang='hi-IN';speechSynthesis.speak(u)}}
+function respond(raw){let q=raw.trim().toLowerCase();if(!q)return;let answer='';
+if(q.includes('whatsapp')){answer='WhatsApp खोल रहा हूँ। मैसेज भेजने के लिए WhatsApp में संपर्क चुनें और भेजने से पहले जाँच लें।';window.location.href='https://wa.me/';}
+else if(q.includes('google')||q.includes('खोज')){answer='Google सर्च खोल रहा हूँ।';window.open('https://www.google.com/search?q='+encodeURIComponent(raw),'_blank');}
+else if(q.includes('youtube')){answer='YouTube खोल रहा हूँ।';window.open('https://www.youtube.com/','_blank');}
+else if(q.includes('समय')){answer='अभी समय है '+new Date().toLocaleTimeString('hi-IN',{hour:'2-digit',minute:'2-digit'});}
+else if(q.includes('नमस्ते')||q.includes('हेलो')){answer='नमस्ते Aman! मैं AMAN AI MAX का पहला संस्करण हूँ।';}
+else{answer='आपका कमांड मिला: “'+raw+'”। अभी इस वेब संस्करण में सामान्य AI उत्तर के लिए AI सेवा कनेक्ट नहीं है। अगले चरण में सुरक्षित AI Brain जोड़ेंगे।';}
+$('#reply').textContent=answer;say(answer);$('#status').textContent='कमांड प्राप्त हुआ';
+}
+$('#send').onclick=()=>respond($('#prompt').value);
+document.querySelectorAll('[data-cmd]').forEach(b=>b.onclick=()=>{ $('#prompt').value=b.dataset.cmd;respond(b.dataset.cmd)});
+$('#speak').onclick=()=>{if(lastReply)say(lastReply);else say('अभी कोई जवाब नहीं है।')};
+$('#mic').onclick=()=>{const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR){$('#status').textContent='इस ब्राउज़र में वॉइस इनपुट उपलब्ध नहीं है। Chrome में खोलकर देखें।';return;}let r=new SR();r.lang='hi-IN';r.interimResults=false;r.onstart=()=>$('#status').textContent='सुन रहा हूँ…';r.onerror=e=>$('#status').textContent='माइक त्रुटि: '+e.error;r.onresult=e=>{let t=e.results[0][0].transcript;$('#prompt').value=t;respond(t)};r.onend=()=>{if($('#status').textContent==='सुन रहा हूँ…')$('#status').textContent='तैयार हूँ'};r.start();};
+</script>
+</body></html>
